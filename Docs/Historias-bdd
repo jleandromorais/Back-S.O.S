@@ -147,7 +147,89 @@ Para que eu possa relatar casos de bullying sem medo de represálias.
 
 ---
 
-## HU 07 - [Título da História]
+## HU 07 – Visualização de Detalhes da Denúncia
+
+**História de Usuário**  
+Como gestor,  
+Eu quero visualizar os detalhes completos de uma denúncia,  
+Para que eu possa analisar todas as informações do caso antes de tomar providências.
+
+### Cenário 1 (positivo) – Detalhes exibidos corretamente
+- **Dado que** estou logado como gestor  
+- **E** existe uma denúncia registrada no sistema  
+- **Quando** clico em uma denúncia da lista  
+- **Então** o sistema deve exibir todas as informações da denúncia (tipo, descrição, data, local, status, anonimato)  
+
+### Cenário 2 (negativo) – Falha ao carregar detalhes
+- **Dado que** estou logado como gestor  
+- **E** ocorre um erro ao buscar os detalhes da denúncia  
+- **Quando** tento abrir a denúncia  
+- **Então** o sistema deve exibir uma mensagem de erro informando que não foi possível carregar os detalhes  
+
+---
+
+## HU 08 – Atualização do Status da Denúncia
+
+**História de Usuário**  
+Como gestor,  
+Eu quero atualizar o status de uma denúncia (em andamento, finalizado, etc.),  
+Para que o andamento do caso seja registrado corretamente no sistema.
+
+### Cenário 1 (positivo) – Status atualizado com sucesso
+- **Dado que** estou logado como gestor  
+- **E** a denúncia está registrada no sistema  
+- **Quando** altero o status da denúncia para “Em andamento” ou “Finalizado”  
+- **Então** o sistema deve salvar a alteração  
+- **E** a nova informação deve ser exibida no painel e no histórico da denúncia  
+
+### Cenário 2 (negativo) – Falha ao atualizar status
+- **Dado que** estou logado como gestor  
+- **E** ocorre um erro no sistema ao salvar a alteração  
+- **Quando** tento atualizar o status da denúncia  
+- **Então** o sistema deve exibir uma mensagem de erro  
+- **E** o status anterior deve permanecer registrado  
+
+---
+
+## HU 09 – Filtro e Pesquisa de Denúncias
+
+**História de Usuário**  
+Como gestor,  
+Eu quero filtrar e pesquisar denúncias por tipo, data ou status,  
+Para que eu possa encontrar rapidamente os casos relevantes.
+
+### Cenário 1 (positivo) – Filtragem realizada com sucesso
+- **Dado que** estou logado como gestor  
+- **E** existem várias denúncias registradas  
+- **Quando** aplico um filtro ou faço uma pesquisa  
+- **Então** o sistema deve exibir apenas as denúncias que correspondem aos critérios  
+
+### Cenário 2 (negativo) – Nenhuma denúncia encontrada
+- **Dado que** estou logado como gestor  
+- **E** não existem denúncias que correspondam aos critérios de pesquisa  
+- **Quando** aplico um filtro ou faço uma pesquisa  
+- **Então** o sistema deve exibir uma mensagem informando que não há resultados  
+
+---
+
+## HU 10 – Histórico de Denúncias do Aluno
+
+**História de Usuário**  
+Como aluno,  
+Eu quero visualizar o histórico das minhas denúncias registradas,  
+Para que eu possa acompanhar todas as denúncias que já realizei e seus respectivos protocolos.
+
+### Cenário 1 (positivo) – Histórico exibido corretamente
+- **Dado que** estou logado como aluno  
+- **E** tenho denúncias registradas no sistema  
+- **Quando** acesso a tela de histórico de denúncias  
+- **Então** o sistema deve exibir todas as minhas denúncias com tipo, data, protocolo e status  
+
+### Cenário 2 (negativo) – Nenhuma denúncia registrada
+- **Dado que** estou logado como aluno  
+- **E** não tenho nenhuma denúncia registrada  
+- **Quando** acesso a tela de histórico de denúncias  
+- **Então** o sistema deve exibir uma mensagem informando que não há denúncias no histórico
 
 
 ---
