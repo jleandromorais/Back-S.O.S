@@ -7,7 +7,7 @@ Repositório do projeto **S.O.S Escola**.
 ## 📌 Entrega 01 (09/09)
 
 ### ✅ Histórias de Usuário
-- [Histórias em BDD](Docs/Historias-bdd)
+- [Histórias em BDD](/historias-bdd.md)
 
 ### 🎨 Protótipo (Lo-Fi)
 - [Protótipo no Figma](https://www.figma.com/design/LttrqgGPeTN1Wa9hu6Iidk/S.O.S-Escola?node-id=0-1)
