@@ -1,0 +1,11 @@
+package S.O.S.Escola.CESAR.Enum;
+
+public enum TipoDeDenun {
+    BULLYING,
+    ASSEDIO,
+    DISCRIMINACAO,
+    VANDALISMO,
+    FRAUDE_ACADEMICA,
+    PROBLEMA_INFRAESTRUTURA,
+    OUTROS
+}
