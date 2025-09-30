@@ -1,11 +1,11 @@
-package S.O.S.Escola.CESAR.DTO;
+package br.com.sosescolar.DTO;
 
-import S.O.S.Escola.CESAR.Enum.TipoDeDenun;
+import br.com.sosescolar.Enum.TipoDeDenun;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.antlr.v4.runtime.misc.NotNull;
-
+import br.com.sosescolar.DTO.AlunoDTO;
 import java.time.LocalDateTime;
 @Data
 public class DenunciaDTO {

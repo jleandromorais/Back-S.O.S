@@ -1,4 +1,4 @@
-package S.O.S.Escola.CESAR.Enum;
+package br.com.sosescolar.Enum;
 
 public enum TipoDeDenun {
     BULLYING,

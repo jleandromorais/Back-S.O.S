@@ -1,4 +1,4 @@
-package S.O.S.Escola.CESAR.DTO;
+package br.com.sosescolar.DTO;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

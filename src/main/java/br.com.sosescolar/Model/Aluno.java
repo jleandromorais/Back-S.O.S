@@ -1,6 +1,6 @@
-package S.O.S.Escola.CESAR.Model;
+package br.com.sosescolar.Model;
 
-import S.O.S.Escola.CESAR.Model.Denuncia;
+import br.com.sosescolar.Model.Denuncia;
 import jakarta.persistence.*;
 import lombok.*;
 

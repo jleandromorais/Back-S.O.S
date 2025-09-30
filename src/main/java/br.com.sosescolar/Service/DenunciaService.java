@@ -1,11 +1,11 @@
-package S.O.S.Escola.CESAR.Service;
+package br.com.sosescolar.Service;
 
-import S.O.S.Escola.CESAR.DTO.AlunoDTO;
-import S.O.S.Escola.CESAR.DTO.DenunciaDTO;
-import S.O.S.Escola.CESAR.Model.Aluno;
-import S.O.S.Escola.CESAR.Model.Denuncia;
-import S.O.S.Escola.CESAR.Repository.AlunoRepository;
-import S.O.S.Escola.CESAR.Repository.DenunciaRepository;
+import br.com.sosescolar.DTO.AlunoDTO;
+import br.com.sosescolar.DTO.DenunciaDTO;
+import br.com.sosescolar.Model.Aluno;
+import br.com.sosescolar.Model.Denuncia;
+import br.com.sosescolar.Repository.AlunoRepository;
+import br.com.sosescolar.Repository.DenunciaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

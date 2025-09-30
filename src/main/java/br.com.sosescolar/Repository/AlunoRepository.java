@@ -1,6 +1,6 @@
-package S.O.S.Escola.CESAR.Repository;
+package br.com.sosescolar.Repository;
 
-import S.O.S.Escola.CESAR.Model.Aluno;
+import br.com.sosescolar.Model.Aluno;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

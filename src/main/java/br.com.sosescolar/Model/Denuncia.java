@@ -1,6 +1,7 @@
-package S.O.S.Escola.CESAR.Model;
+package br.com.sosescolar.Model;
 
-import S.O.S.Escola.CESAR.Enum.TipoDeDenun;
+import br.com.sosescolar.Model.Aluno;
+import br.com.sosescolar.Enum.TipoDeDenun;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;

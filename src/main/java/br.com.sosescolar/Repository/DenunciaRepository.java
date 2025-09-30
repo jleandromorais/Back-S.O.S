@@ -1,6 +1,6 @@
-package S.O.S.Escola.CESAR.Repository;
+package br.com.sosescolar.Repository;
 
-import S.O.S.Escola.CESAR.Model.Denuncia;
+import br.com.sosescolar.Model.Denuncia;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

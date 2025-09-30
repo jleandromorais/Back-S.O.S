@@ -1,7 +1,7 @@
-package S.O.S.Escola.CESAR.Controller;
+package br.com.sosescolar.Controller;
 
-import S.O.S.Escola.CESAR.DTO.DenunciaDTO;
-import S.O.S.Escola.CESAR.Service.DenunciaService;
+import br.com.sosescolar.DTO.DenunciaDTO;
+import br.com.sosescolar.Service.DenunciaService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package S.O.S.Escola.CESAR;
+package br.com.sosescolar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
