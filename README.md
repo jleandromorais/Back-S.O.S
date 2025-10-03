@@ -15,7 +15,9 @@ Repositório do projeto **S.O.S Escola**.
 
 ---
 ### 📌 screencast
--[Screencast](https://youtu.be/1msdiDh64T8?si=UcwZ7tIZOldYyBha)
+- [Screencast](https://youtu.be/1msdiDh64T8?si=UcwZ7tIZOldYyBha)
+
+---
 
 ## 📌 Próximas entregas
 *(Aqui futuramente colocamos as demais entregas 02, 03, etc.)*
