@@ -30,22 +30,31 @@ public class Denuncia {
     @Column (nullable = true)
     private String nomeAluno;
 
-    private LocalDateTime dataCriacao;
+    @Column(nullable = false)
+    private String localOcorrencia;
 
-    private String status;
+    @Column(columnDefinition = "TEXT", nullable = false)
+    private  String descricaoOcorrencia;
 
     // NOVO CAMPO
     @Column(nullable = false)
-    private boolean anonima;
+    private boolean dataOcorrencia;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    // ALTERAÇÃO CRÍTICA: nullable agora é true para permitir denúncias anônimas (sem autor)
-    @JoinColumn(name = "aluno_id", nullable = true)
-    private Aluno autor;
+
+
+    // Um protocolo pode ser gerado após a criação, então pode começar como nulo
+    @Column(unique = true, nullable = true)
+    private String protocolo;
+
+    @Column(nullable = false)
+    private String situacao;
+
 
     @PrePersist
     protected void onCreate() {
-        dataCriacao = LocalDateTime.now();
-        status = "Recebida";
+        // Define um status inicial padrão ao criar uma nova denúncia
+        if (this.situacao == null) {
+            this.situacao = "Recebida";
+        }
     }
 }
