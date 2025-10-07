@@ -21,10 +21,7 @@ public class Aluno {
     private Long id;
 
     @Column(nullable = false)
-    private String tipoDenuncia;
-
-    @Column(nullable = false)
-    private String nomeAluno;
+    private String nomeCompleto;
 
     @Column(nullable = false, unique = true)
     private String matricula;

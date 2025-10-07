@@ -22,12 +22,13 @@ public class Denuncia {
     // NOVO CAMPO
     @Enumerated(EnumType.STRING) // Salva o nome do enum (ex: "BULLYING") no banco, o que é mais legível
     @Column(nullable = false)
-    private TipoDeDenun tipo;
+    private TipoDeDenun tipoDenuncia;
 
-    private String titulo;
+    @Column (nullable = false)
+    private boolean identificacao;
 
-    @Column(columnDefinition = "TEXT")
-    private String descricao;
+    @Column (nullable = true)
+    private String nomeAluno;
 
     private LocalDateTime dataCriacao;
 
