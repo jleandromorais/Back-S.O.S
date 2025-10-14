@@ -21,7 +21,7 @@ public class DenunciaService {
 
     @Transactional
     public DenunciaDTO criarDenuncia(DenunciaDTO dto) {
-        Denuncia denuncia = new Denunciaa();
+        Denuncia denuncia = new Denuncia();
 
         // Mapeia os campos do DTO para o novo Model
         denuncia.setTipoDenuncia(dto.getTipoDenuncia());
