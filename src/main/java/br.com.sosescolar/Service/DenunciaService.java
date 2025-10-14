@@ -1,15 +1,15 @@
 package br.com.sosescolar.Service;
 
-import br.com.sosescolar.DTO.AlunoDTO;
 import br.com.sosescolar.DTO.DenunciaDTO;
-import br.com.sosescolar.Model.Aluno;
 import br.com.sosescolar.Model.Denuncia;
-import br.com.sosescolar.Repository.AlunoRepository;
 import br.com.sosescolar.Repository.DenunciaRepository;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.UUID;
 
 @Service
 public class DenunciaService {
@@ -17,50 +17,64 @@ public class DenunciaService {
     @Autowired
     private DenunciaRepository denunciaRepository;
 
-    @Autowired
-    private AlunoRepository alunoRepository;
+    // O AlunoRepository não é mais necessário, pois não há mais uma entidade Aluno associada.
 
     @Transactional
     public DenunciaDTO criarDenuncia(DenunciaDTO dto) {
-        Denuncia denuncia = new Denuncia();
-        denuncia.setTipo(dto.getTipo());
-        denuncia.setTitulo(dto.getTitulo());
-        denuncia.setDescricao(dto.getDescricao());
-        denuncia.setAnonima(dto.getAnonima());
+        Denuncia denuncia = new Denunciaa();
 
-        if (!dto.getAnonima()) {
-            if (dto.getAutorId() == null) {
-                throw new IllegalArgumentException("ID do autor é obrigatório.");
+        // Mapeia os campos do DTO para o novo Model
+        denuncia.setTipoDenuncia(dto.getTipoDenuncia());
+        denuncia.setLocalOcorrencia(dto.getLocalOcorrencia());
+        denuncia.setDescricaoOcorrencia(dto.getDescricaoOcorrencia());
+        denuncia.setIdentificacao(dto.isIdentificacao());
+        denuncia.setDataOcorrencia(dto.isDataOcorrencia()); // Mapeando o novo campo booleano
+
+        // Lógica para denúncias identificadas
+        if (dto.isIdentificacao()) {
+            if (dto.getNomeAluno() == null || dto.getNomeAluno().trim().isEmpty()) {
+                throw new IllegalArgumentException("O nome do aluno é obrigatório para denúncias identificadas.");
             }
-            Aluno autor = alunoRepository.findById(dto.getAutorId())
-                    .orElseThrow(() -> new EntityNotFoundException("Aluno não encontrado!"));
-            denuncia.setAutor(autor);
+            denuncia.setNomeAluno(dto.getNomeAluno());
         }
+
+        // Gera um protocolo único antes de salvar
+        denuncia.setProtocolo(gerarProtocolo());
+
+        // A situacao inicial "Recebida" será definida pelo @PrePersist no Model
 
         Denuncia denunciaSalva = denunciaRepository.save(denuncia);
         return toDTO(denunciaSalva);
     }
 
+    /**
+     * Gera um número de protocolo único.
+     * Exemplo: 20251014-ABC123DE
+     */
+    private String gerarProtocolo() {
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        String uuid = UUID.randomUUID().toString().toUpperCase().substring(0, 8);
+        return timestamp + "-" + uuid;
+    }
+
+    /**
+     * Converte a entidade Denuncia para DenunciaDTO.
+     */
     private DenunciaDTO toDTO(Denuncia denuncia) {
+        // Assume-se que o DenunciaDTO foi atualizado para corresponder ao novo Model
         DenunciaDTO dto = new DenunciaDTO();
         dto.setId(denuncia.getId());
-        dto.setTipo(denuncia.getTipo());
-        dto.setTitulo(denuncia.getTitulo());
-        dto.setDescricao(denuncia.getDescricao());
-        dto.setAnonima(denuncia.isAnonima());
-        dto.setStatus(denuncia.getStatus());
-        dto.setDataCriacao(denuncia.getDataCriacao());
-        dto.setAutorId(null);
+        dto.setTipoDenuncia(denuncia.getTipoDenuncia());
+        dto.setLocalOcorrencia(denuncia.getLocalOcorrencia());
+        dto.setDescricaoOcorrencia(denuncia.getDescricaoOcorrencia());
+        dto.setIdentificacao(denuncia.isIdentificacao());
+        dto.setNomeAluno(denuncia.getNomeAluno()); // Será null se não for identificada
+        dto.setDataOcorrencia(denuncia.isDataOcorrencia());
+        dto.setSituacao(denuncia.getSituacao());
+        dto.setProtocolo(denuncia.getProtocolo());
 
-        if (denuncia.getAutor() != null) {
-            AlunoDTO autorDto = new AlunoDTO();
-            autorDto.setId(denuncia.getAutor().getId());
-            autorDto.setNomeCompleto(denuncia.getAutor().getNomeCompleto());
-            autorDto.setMatricula(denuncia.getAutor().getMatricula());
-            autorDto.setEmail(denuncia.getAutor().getEmail());
-            autorDto.setSenha(null);
-            dto.setAutor(autorDto);
-        }
+        // O campo 'autor' (do tipo AlunoDTO) não existe mais no DTO,
+        // foi substituído por 'nomeAluno' (String).
 
         return dto;
     }
