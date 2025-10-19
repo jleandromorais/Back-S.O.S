@@ -1,6 +1,9 @@
 package br.com.sosescolar.Service;
 
+import br.com.sosescolar.DTO.ProfessorSignUpRequest;
+import br.com.sosescolar.Model.User;
 import br.com.sosescolar.Repository.UserRepository;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
