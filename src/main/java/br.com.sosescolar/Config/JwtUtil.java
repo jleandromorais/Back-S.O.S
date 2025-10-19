@@ -1,8 +1,17 @@
 package br.com.sosescolar.Config;
 
-import lombok.Value;
+//      AQUI ESTAVA O ERRO PRINCIPAL     //
+// import lombok.Value;                 // <<< ERRADO
+import org.springframework.beans.factory.annotation.Value; // <<< CORRIGIDO
+
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
+
+// --- IMPORTS QUE ESTAVAM FALTANDO ---
+// Você precisa deles para o Jwts, Claims, etc. funcionarem
+
+import java.util.function.Function;
+// --- FIM DOS IMPORTS FALTANTES ---
 
 import java.util.Date;
 
