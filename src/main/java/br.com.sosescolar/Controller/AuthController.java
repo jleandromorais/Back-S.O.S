@@ -1,5 +1,20 @@
 package br.com.sosescolar.Controller;
 
+import br.com.sosescolar.Config.JwtUtil;
+import br.com.sosescolar.DTO.AuthenticationRequest;
+import br.com.sosescolar.DTO.AuthenticationResponse;
+import br.com.sosescolar.DTO.ProfessorSignUpRequest;
+import br.com.sosescolar.Service.AuthService;
+import br.com.sosescolar.Service.MyUserDetailsService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
