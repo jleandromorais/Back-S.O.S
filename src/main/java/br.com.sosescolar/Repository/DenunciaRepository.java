@@ -27,4 +27,5 @@ public interface DenunciaRepository extends JpaRepository<Denuncia, Long> {
      * @return Uma lista de denúncias daquele tipo.
      */
 
+
 }

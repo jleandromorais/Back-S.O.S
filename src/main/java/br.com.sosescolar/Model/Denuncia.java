@@ -41,6 +41,12 @@ public class Denuncia {
     private boolean dataOcorrencia;
 
 
+    @Column(nullable = false)
+    private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "aluno_id") // ou o nome da sua coluna
+    private Aluno autor; // <-- O nome deste campo deve ser "autor"
 
     // Um protocolo pode ser gerado após a criação, então pode começar como nulo
     @Column(unique = true, nullable = true)
