@@ -47,17 +47,13 @@ public class JwtUtil {
         return claimsResolver.apply(claims);
     }
 
-    /**
-     * ESTE É O CÓDIGO MODERNO CORRETO
-     */
     private Claims extractAllClaims(String token) {
-        return Jwts.parserBuilder()
-                .setSigningKey(getSigningKey())
-                .build() // <-- O .build() é essencial
-                .parseClaimsJws(token)
-                .getBody();
+        return Jwts.parser()
+                .verifyWith(getSigningKey()) // Use your existing getSigningKey() method
+                .build()
+                .parseSignedClaims(token)
+                .getPayload();
     }
-
     private Boolean isTokenExpired(String token) {
         return extractExpiration(token).before(new Date());
     }
