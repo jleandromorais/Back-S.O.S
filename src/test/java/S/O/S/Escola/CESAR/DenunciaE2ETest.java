@@ -1,4 +1,4 @@
-package br.com.sosescolar.CESAR;
+package S.O.S.Escola.CESAR;
 
 import br.com.sosescolar.DTO.DenunciaDTO;
 import br.com.sosescolar.Enum.TipoDeDenun;
@@ -12,7 +12,10 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(
+    classes = br.com.sosescolar.CesarApplication.class,
+    webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
+)
 @ActiveProfiles("test")
 class DenunciaE2ETest {
 

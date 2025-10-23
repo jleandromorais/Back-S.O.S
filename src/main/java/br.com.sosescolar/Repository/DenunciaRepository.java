@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface DenunciaRepository extends JpaRepository<Denuncia, Long> {
@@ -18,8 +19,6 @@ public interface DenunciaRepository extends JpaRepository<Denuncia, Long> {
      * @param status O status a ser pesquisado.
      * @return Uma lista de denúncias que correspondem ao status.
      */
-    List<Denuncia> findByStatus(String status);
-
     Optional<Denuncia> findByProtocolo(String protocolo);
 
 

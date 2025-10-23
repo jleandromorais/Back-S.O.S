@@ -18,7 +18,6 @@ public class SecurityConfig {
 
     private final JwtRequestFilter securityFilter;
 
-    // Injeção de dependência via construtor
     public SecurityConfig(JwtRequestFilter securityFilter) {
         this.securityFilter = securityFilter;
     }
@@ -26,18 +25,16 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
-                .csrf(csrf -> csrf.disable()) // Desabilita CSRF para APIs stateless
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Sessão stateless
+                .csrf(csrf -> csrf.disable())
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize -> authorize
-                        // Endpoints públicos (CORRIGIDOS)
                         .requestMatchers(HttpMethod.POST, "/api/auth/professor/login").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/auth/professor/register").permitAll()
-                        // Endpoints restritos (exemplo)
+                        .requestMatchers(HttpMethod.POST, "/api/auth/professor/register").permitAll()  // 👈 FECHA AQUI
+                        .requestMatchers(HttpMethod.POST, "/api/denuncias").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/denuncias/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/product").hasRole("ADMIN")
-                        // Qualquer outra requisição precisa estar autenticada
                         .anyRequest().authenticated()
                 )
-                // Adiciona nosso filtro JWT antes do filtro padrão do Spring
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
