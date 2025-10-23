@@ -20,6 +20,9 @@ public interface DenunciaRepository extends JpaRepository<Denuncia, Long> {
      */
     List<Denuncia> findByStatus(String status);
 
+    Optional<Denuncia> findByProtocolo(String protocolo);
+
+
     /**
      * Encontra todas as denúncias de um tipo específico.
      * Exemplo de uso: denunciaRepository.findByTipo(TipoDenuncia.BULLYING);

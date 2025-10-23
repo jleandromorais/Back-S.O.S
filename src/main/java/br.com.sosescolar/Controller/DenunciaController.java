@@ -23,4 +23,14 @@ public class DenunciaController {
         DenunciaDTO novaDenuncia = denunciaService.criarDenuncia(dto);
         return new ResponseEntity<>(novaDenuncia, HttpStatus.CREATED);
     }
+
+    @GetMapping("/{protocolo}")
+    public ResponseEntity<DenunciaDTO> buscarPorProtocolo(@PathVariable String protocolo) {
+        try {
+            DenunciaDTO denuncia = denunciaService.buscarPorProtocolo(protocolo);
+            return ResponseEntity.ok(denuncia);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.notFound().build();
+    }
+}
 }

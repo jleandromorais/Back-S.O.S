@@ -56,6 +56,16 @@ public class DenunciaService {
         String uuid = UUID.randomUUID().toString().toUpperCase().substring(0, 8);
         return timestamp + "-" + uuid;
     }
+    
+    /**
+     * Busca uma denúncia pelo protocolo.
+     */
+    public DenunciaDTO buscarPorProtocolo(String protocolo) {
+        Denuncia denuncia = denunciaRepository.findByProtocolo(protocolo)
+                .orElseThrow(() -> new IllegalArgumentException(
+                    "Denúncia não encontrada com o protocolo: " + protocolo));
+        return toDTO(denuncia);
+}
 
     /**
      * Converte a entidade Denuncia para DenunciaDTO.
