@@ -19,11 +19,7 @@ import org.springframework.security.test.context.support.WithMockUser;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-<<<<<<< HEAD
-@SpringBootTest(
-    classes = br.com.sosescolar.CesarApplication.class,
-    webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
-=======
+
 /**
  * CORREÇÃO 1: 'classes = CesarApplication.class'
  * (Isto já deve estar correto, baseado nos seus imports)
@@ -31,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         classes = CesarApplication.class
->>>>>>> 022a2289939e2772ab87bcdfbac84ae27dcc0ee1
+
 )
 @ActiveProfiles("test")
 /**

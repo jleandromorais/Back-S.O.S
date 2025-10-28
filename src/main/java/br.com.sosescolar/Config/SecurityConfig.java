@@ -28,8 +28,11 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers(HttpMethod.POST, "/api/auth/professor/login").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/auth/professor/register").permitAll()  // 👈 FECHA AQUI
+                        // <-- ROTA DE LOGIN RENOMEADA -->
+                        .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/auth/professor/register").permitAll()
+                        // <-- NOVA ROTA DE ALUNO PERMITIDA -->
+                        .requestMatchers(HttpMethod.POST, "/api/auth/aluno/register").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/denuncias").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/denuncias/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/product").hasRole("ADMIN")

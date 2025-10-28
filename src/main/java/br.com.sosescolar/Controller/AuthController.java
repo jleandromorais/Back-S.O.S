@@ -1,6 +1,7 @@
 package br.com.sosescolar.Controller;
 
 import br.com.sosescolar.Config.JwtUtil;
+import br.com.sosescolar.DTO.AlunoSignUpRequest; // <-- NOVO IMPORT
 import br.com.sosescolar.DTO.AuthenticationRequest;
 import br.com.sosescolar.DTO.AuthenticationResponse;
 import br.com.sosescolar.DTO.ProfessorSignUpRequest;
@@ -42,7 +43,19 @@ public class AuthController {
         }
     }
 
-    @PostMapping("/professor/login")
+    // <-- NOVO ENDPOINT ADICIONADO -->
+    @PostMapping("/aluno/register")
+    public ResponseEntity<?> registerAluno(@RequestBody AlunoSignUpRequest signUpRequest) {
+        try {
+            authService.registerAluno(signUpRequest);
+            return ResponseEntity.ok("Aluno registrado com sucesso!");
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    // <-- ROTA RENOMEADA (de /professor/login para /login) -->
+    @PostMapping("/login")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) {
         try {
             authenticationManager.authenticate(
