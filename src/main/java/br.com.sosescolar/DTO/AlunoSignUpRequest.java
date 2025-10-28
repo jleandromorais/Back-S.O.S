@@ -9,5 +9,5 @@ public class AlunoSignUpRequest {
     private String nome;
     private String email;
     private String senha;
-    private String matricula; // <- Campo adicional
+    // O campo "matricula" foi removido daqui
 }
