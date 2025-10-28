@@ -95,8 +95,9 @@ O **S.O.S Escola** é uma plataforma de denúncias anônimas desenvolvida para p
 
 - **Enzo Antuna**
 - **Gabriel Souza**
-- **Kayky Levi Moraes**
+- **Levi Moraes**
 - **Leandro Morais**
+- **Kayky Dias**
 
 ---
 
