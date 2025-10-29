@@ -41,8 +41,7 @@ public class Denuncia {
     private boolean dataOcorrencia;
 
 
-    @Column(nullable = false)
-    private String status;
+
 
     @ManyToOne
     @JoinColumn(name = "aluno_id") // ou o nome da sua coluna
