@@ -26,16 +26,25 @@ public class User implements UserDetails {
     private String senha;
     private String role;
 
+    // <-- O CAMPO 'matricula' FOI REMOVIDO DESTA CLASSE -->
+
+
     // Métodos de UserDetails
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // Usando Switch Expression (Java 21) para mais clareza
         return switch (this.role) {
             case "ADMIN" -> List.of(
                     new SimpleGrantedAuthority("ROLE_ADMIN"),
+                    new SimpleGrantedAuthority("ROLE_USER"),
+                    new SimpleGrantedAuthority("ROLE_ALUNO"),
+                    new SimpleGrantedAuthority("ROLE_PROFESSOR")
+            );
+            case "PROFESSOR" -> List.of(
+                    new SimpleGrantedAuthority("ROLE_PROFESSOR"),
                     new SimpleGrantedAuthority("ROLE_USER")
             );
+            case "ALUNO" -> List.of(new SimpleGrantedAuthority("ROLE_USER"));
             default -> List.of(new SimpleGrantedAuthority("ROLE_USER"));
         };
     }
