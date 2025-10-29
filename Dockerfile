@@ -1,5 +1,6 @@
 # Estágio 1: Build com JDK 21
-FROM maven:3.9.3-eclipse-temurin-21 AS build
+# Esta linha foi corrigida para usar uma tag oficial
+FROM maven:3-eclipse-temurin-21 AS build
 WORKDIR /app
 
 # 1. Copia o pom.xml e baixa as dependências
@@ -10,7 +11,7 @@ RUN mvn dependency:go-offline
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-# Estágio 2: Runtime com JRE 21 (imagem menor)
+# Estágio 2: Runtime com JRE 21
 FROM eclipse-temurin:21-jre
 WORKDIR /app
 
