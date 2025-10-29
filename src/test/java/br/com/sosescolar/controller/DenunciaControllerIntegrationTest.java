@@ -112,7 +112,6 @@ class DenunciaControllerIntegrationTest {
         denuncia.setDataOcorrencia(true);
         denuncia.setProtocolo("20251029-TEST1234");
         denuncia.setSituacao("Recebida");
-        denuncia.setStatus("Pendente");
         denunciaRepository.save(denuncia);
 
         // Buscar por protocolo
@@ -209,7 +208,6 @@ class DenunciaControllerIntegrationTest {
         denuncia.setDataOcorrencia(true);
         denuncia.setProtocolo("20251029-FULL1234");
         denuncia.setSituacao("Recebida");
-        denuncia.setStatus("Em análise");
         denunciaRepository.save(denuncia);
 
         // Buscar e verificar todos os campos
