@@ -52,6 +52,8 @@ public class Denuncia {
     @Column(unique = true, nullable = true)
     private String protocolo;
 
+    //cuidado ao codar
+
     @Column(nullable = false)
     private String situacao;
 
