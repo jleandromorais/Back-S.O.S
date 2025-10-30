@@ -1,6 +1,6 @@
 # 📘 S.O.S Escola
 
-Repositório do projeto **S.O.S Escola** - uma plataforma de denúncias anônimas para escolas, promovendo um ambiente escolar mais seguro e acolhedor.
+Repositório da API do projeto **S.O.S Escola** - uma plataforma de denúncias anônimas para escolas, promovendo um ambiente escolar mais seguro e acolhedor.
 
 ---
 
@@ -38,57 +38,52 @@ O **S.O.S Escola** é uma plataforma de denúncias anônimas desenvolvida para p
 ### 📌 Entrega 02 (30/09)
 
 #### ✅ Histórias Implementadas
-- **Ao menos 2 histórias implementadas**
-- Interface gráfica ou texto
+- HU 01 Cadastro de Denúncia Confidencial
+- HU 02 Visualização de Denúncias pela Equipe Pedagógica
 - Persistência realizada em memória
-- [Link para as histórias implementadas](#) *(atualizar)*
 
 #### 🔄 Ambiente de Versionamento
 - **Commits frequentes** (no mínimo semanais)
 - Commits realizados direto no main
-- [Repositório GitHub](https://github.com/seu-usuario/sos-escola) *(atualizar link)*
+- [Repositório GitHub](https://github.com/jleandromorais/Back-S.O.S/tree/leandro-branch)
 
 #### 🐛 Issue/Bug Tracker
 - **Issue tracker atualizado** e usado em todas as semanas da entrega
-- [Print da tela adicionado ao README](#) *(atualizar)*
-- [Ver issues no GitHub](#) *(atualizar)*
+- <img width="1476" height="394" alt="image" src="https://github.com/user-attachments/assets/26216e2a-f6e5-4571-9e67-c00a4ec89bca" />
+
 
 #### 🎬 Screencast do Sistema
 - **Vídeo demonstrativo:** [Vídeo no YouTube](https://youtu.be/1msdiDh64T8?si=UcwZ7tIZOldYyBha)
-- Demonstração do uso do sistema com áudio ou legenda
-
 ---
 
 ### 📌 Entrega 03
 
-🚧 **Em desenvolvimento**
-
 #### ✅ Histórias Implementadas
-- **Seleção de mais 2 histórias para implementar**
-- [Link para as histórias selecionadas](#) *(em breve)*
+- HU 03 Geração de Protocolo de Denúnica
+- HU 04 Registro e Login Seguro para Usuários
 
 #### 🔄 Ambiente de Versionamento
-- **Commits frequentes** (no mínimo semanais)
-- [Repositório GitHub](https://github.com/seu-usuario/sos-escola) *(atualizar link)*
+- **Commits frequentes**
+- [Repositório GitHub](https://github.com/jleandromorais/Back-S.O.S/tree/leandro-branch)
 
 #### 🏗️ Arquitetura
-- **Refatoração do código** para uso de arquitetura em camadas com padrões de projeto
-- [Print da estrutura do projeto](#) *(em breve)*
+- **Refatoração do código**
+- <img width="313" height="835" alt="image" src="https://github.com/user-attachments/assets/d2fe5698-83cf-43de-9c8f-f091c6e565fa" />
+
 
 #### 🎬 Screencast do Sistema
 - **Vídeo demonstrativo** do sistema funcionando
 - Disponível no YouTube com áudio ou legenda
 - Ênfase nas novas histórias implementadas
-- [Link do screencast](#) *(em breve)*
+- [Link do screencast](https://youtu.be/c7B6vJYo8Co?si=wFgMHK2XZdp1invB)
 
 #### 🐛 Issue/Bug Tracker
-- **Issue tracker atualizado** no GitHub
-- [Ver issues no GitHub](#) *(em breve)*
+- **Issue tracker atualizado**
+- [Ver issues no GitHub](https://github.com/jleandromorais/Back-S.O.S/issues)
 
 #### 🧪 Testes Automatizados
-- **Testes implementados** para as funcionalidades
-- [Screencast da execução dos testes](#) *(em breve)*
-
+- **Testes implementados**
+- Relatório de Testes (https://github.com/jleandromorais/Back-S.O.S/blob/leandro-branch/%F0%9F%A7%AA%20Relat%C3%B3rio%20de%20Testes%20Automatizados%20-%20S.O.S%20Escola.md)
 ---
 
 ## 👥 Equipe
