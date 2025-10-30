@@ -75,7 +75,7 @@ O **S.O.S Escola** é uma plataforma de denúncias anônimas desenvolvida para p
 - **Vídeo demonstrativo** do sistema funcionando
 - Disponível no YouTube com áudio ou legenda
 - Ênfase nas novas histórias implementadas
-- [Link do screencast](https://youtu.be/c7B6vJYo8Co?si=wFgMHK2XZdp1invB)
+- [Link do screencast](https://youtu.be/upnG4-8L0J0)
 
 #### 🐛 Issue/Bug Tracker
 - **Issue tracker atualizado**
