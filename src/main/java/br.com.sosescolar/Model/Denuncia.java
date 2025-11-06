@@ -6,8 +6,10 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.time.LocalDateTime;
+
+// --- NOVO IMPORT ---
+import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Data
@@ -19,8 +21,7 @@ public class Denuncia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // NOVO CAMPO
-    @Enumerated(EnumType.STRING) // Salva o nome do enum (ex: "BULLYING") no banco, o que é mais legível
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private TipoDeDenun tipoDenuncia;
 
@@ -36,26 +37,24 @@ public class Denuncia {
     @Column(columnDefinition = "TEXT", nullable = false)
     private  String descricaoOcorrencia;
 
-    // NOVO CAMPO
     @Column(nullable = false)
     private boolean dataOcorrencia;
 
-
-
-
     @ManyToOne
-    @JoinColumn(name = "aluno_id") // ou o nome da sua coluna
-    private Aluno autor; // <-- O nome deste campo deve ser "autor"
+    @JoinColumn(name = "aluno_id")
+    private Aluno autor;
 
-    // Um protocolo pode ser gerado após a criação, então pode começar como nulo
     @Column(unique = true, nullable = true)
     private String protocolo;
-
-    //cuidado ao codar
 
     @Column(nullable = false)
     private String situacao;
 
+    // --- NOVO CAMPO PARA FILTRO DE DATA ---
+    @CreationTimestamp // Define automaticamente a data e hora no momento da criação
+    @Column(nullable = false, updatable = false)
+    private LocalDateTime dataCriacao;
+    // --- FIM DO NOVO CAMPO ---
 
     @PrePersist
     protected void onCreate() {
@@ -63,5 +62,6 @@ public class Denuncia {
         if (this.situacao == null) {
             this.situacao = "Recebida";
         }
+        // A dataCriacao agora é tratada automaticamente pelo @CreationTimestamp
     }
 }
