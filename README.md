@@ -1,4 +1,4 @@
-# 📘 S.O.S Escola
+git push origin main# 📘 S.O.S Escola
 
 Repositório da API do projeto **S.O.S Escola** - uma plataforma de denúncias anônimas para escolas, promovendo um ambiente escolar mais seguro e acolhedor.
 
