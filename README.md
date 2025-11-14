@@ -69,7 +69,7 @@ O **S.O.S Escola** é uma plataforma de denúncias anônimas desenvolvida para p
 
 #### 🏗️ Arquitetura
 - **Refatoração do código**
-- <img width="313" height="835" alt="image" src="https://github.com/user-attachments/assets/d2fe5698-83cf-43de-9c8f-f091c6e565fa" />
+<img width="313" height="835" alt="image" src="https://github.com/user-attachments/assets/d2fe5698-83cf-43de-9c8f-f091c6e565fa" />
 
 
 #### 🎬 Screencast do Sistema
