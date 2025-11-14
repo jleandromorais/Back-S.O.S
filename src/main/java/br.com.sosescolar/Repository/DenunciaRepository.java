@@ -2,14 +2,14 @@ package br.com.sosescolar.Repository;
 
 import br.com.sosescolar.Model.Denuncia;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface DenunciaRepository extends JpaRepository<Denuncia, Long> {
-
+public interface DenunciaRepository extends JpaRepository<Denuncia, Long>, JpaSpecificationExecutor<Denuncia> {
     // --- MÉTODOS DE CONSULTA PERSONALIZADOS (OPCIONAL) ---
     // O Spring Data JPA cria a consulta SQL automaticamente a partir do nome do método.
 
