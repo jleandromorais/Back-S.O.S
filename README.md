@@ -96,12 +96,12 @@ O **S.O.S Escola** é uma plataforma de denúncias anônimas desenvolvida para p
 ### 🔄 Ambiente de Versionamento
 - **Commits frequentes**
 - [Repositório GitHub](https://github.com/jleandromorais/Back-S.O.S/tree/main)
-- 
+
 #### 🎬 Screencast do Sistema
 - **Vídeo demonstrativo** do sistema funcionando
 - Disponível no YouTube com áudio ou legenda
 - [Link do screencast](https://youtu.be/xxxxxxxx)
-- 
+  
 #### 🐛 Issue/Bug Tracker
 - **Issue tracker atualizado**
 - [Ver issues no GitHub](https://github.com/jleandromorais/Back-S.O.S/issues)
