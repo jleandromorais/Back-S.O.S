@@ -11,6 +11,7 @@ Repositório da API do projeto **S.O.S Escola** - uma plataforma de denúncias a
   - [Entrega 01](#-entrega-01-0909)
   - [Entrega 02](#-entrega-02)
   - [Entrega 03](#-entrega-03)
+  - [Entrega 04](#-entrega-04)
 - [Equipe](#-equipe)
 
 ---
@@ -23,7 +24,7 @@ O **S.O.S Escola** é uma plataforma de denúncias anônimas desenvolvida para p
 
 ## 📦 Entregas
 
-### 📌 Entrega 01 (09/09)
+### 📌 Entrega 01
 
 #### ✅ Histórias de Usuário
 - **Documentação:** [Histórias em BDD](historias-bdd.md)
@@ -35,7 +36,7 @@ O **S.O.S Escola** é uma plataforma de denúncias anônimas desenvolvida para p
 
 ---
 
-### 📌 Entrega 02 (30/09)
+### 📌 Entrega 02
 
 #### ✅ Histórias Implementadas
 - HU 01 Cadastro de Denúncia Confidencial
@@ -74,7 +75,6 @@ O **S.O.S Escola** é uma plataforma de denúncias anônimas desenvolvida para p
 #### 🎬 Screencast do Sistema
 - **Vídeo demonstrativo** do sistema funcionando
 - Disponível no YouTube com áudio ou legenda
-- Ênfase nas novas histórias implementadas
 - [Link do screencast](https://youtu.be/upnG4-8L0J0)
 
 #### 🐛 Issue/Bug Tracker
@@ -85,6 +85,30 @@ O **S.O.S Escola** é uma plataforma de denúncias anônimas desenvolvida para p
 - **Testes implementados**
 - Relatório de Testes (https://github.com/jleandromorais/Back-S.O.S/blob/leandro-branch/%F0%9F%A7%AA%20Relat%C3%B3rio%20de%20Testes%20Automatizados%20-%20S.O.S%20Escola.md)
 ---
+
+### 📌 Entrega 04
+
+### ✅ Histórias Implementadas
+- HU 07 Visualização de Detalhes da Denúncia pela Equipe Pedagógica
+- HU 08 Atualização do Status da Denúncia pela Equipe Pedagógica
+- HU 09 Filtro e Pesquisa de Denúncias por tipo, data e status
+
+### 🔄 Ambiente de Versionamento
+- **Commits frequentes**
+- [Repositório GitHub](https://github.com/jleandromorais/Back-S.O.S/tree/main)
+- 
+#### 🎬 Screencast do Sistema
+- **Vídeo demonstrativo** do sistema funcionando
+- Disponível no YouTube com áudio ou legenda
+- [Link do screencast](https://youtu.be/xxxxxxxx)
+- 
+#### 🐛 Issue/Bug Tracker
+- **Issue tracker atualizado**
+- [Ver issues no GitHub](https://github.com/jleandromorais/Back-S.O.S/issues)
+  
+#### 🧪 Testes Automatizados
+- **Testes implementados**
+- Relatório de Testes (https://github.com/jleandromorais/Back-S.O.S/blob/leandro-branch/%F0%9F%A7%AA%20Relat%C3%B3rio%20de%20Testes%20Automatizados%20-%20S.O.S%20Escola.md)
 
 ## 👥 Equipe
 
