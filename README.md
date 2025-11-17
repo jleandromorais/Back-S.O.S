@@ -20,6 +20,115 @@ Repositório da API do projeto S.O.S Escola - uma plataforma de denúncias anôn
 O **S.O.S Escola** é uma plataforma de denúncias anônimas desenvolvida para promover um ambiente escolar mais seguro. O sistema permite que alunos, professores e responsáveis relatem situações de bullying, violência, assédio e outros problemas de forma confidencial, garantindo a proteção da identidade do denunciante e facilitando a intervenção da gestão escolar.
 
 ---
+## 🚀 Como Rodar o Projeto
+
+Esta seção detalha os passos necessários para configurar e executar a API **Back-S.O.S** em seu ambiente local, seja utilizando o Maven diretamente ou através de contêineres Docker.
+
+### Pré-requisitos
+
+Para rodar o projeto, você precisará ter instalado em sua máquina:
+
+*   **Java Development Kit (JDK)**: Versão 17 ou superior.
+*   **Apache Maven**: Versão 3.6.3 ou superior (necessário apenas se não for usar o Maven Wrapper `mvnw`).
+*   **Docker e Docker Compose** (Opcional, para execução containerizada).
+
+---
+
+### Opção 1: Execução Local com Maven
+
+Siga os passos abaixo para clonar o repositório e executar a aplicação diretamente em sua máquina.
+
+#### 1. Clonar o Repositório
+
+Abra o terminal e clone o projeto:
+
+```bash
+git clone https://github.com/jleandromorais/Back-S.O.S.git
+cd Back-S.O.S
+```
+
+#### 2. Compilar o Projeto
+
+Utilize o Maven Wrapper (`mvnw`) para compilar o projeto e baixar todas as dependências necessárias.
+
+```bash
+# No Linux/macOS
+./mvnw clean install
+
+# No Windows (usando o prompt de comando)
+mvnw clean install
+```
+
+#### 3. Executar a Aplicação
+
+Após a compilação bem-sucedida, você pode executar a aplicação a partir do arquivo JAR gerado ou usando o comando `spring-boot:run`.
+
+**Método A: Executar via Spring Boot Plugin**
+
+```bash
+# No Linux/macOS
+./mvnw spring-boot:run
+
+# No Windows
+mvnw spring-boot:run
+```
+
+**Método B: Executar o JAR Gerado**
+
+O arquivo JAR executável será gerado no diretório `target/`.
+
+```bash
+java -jar target/back-sos-0.0.1-SNAPSHOT.jar
+```
+
+A API estará acessível em `http://localhost:8080` (porta padrão do Spring Boot, a menos que configurada de forma diferente).
+
+---
+
+### Opção 2: Execução Containerizada com Docker
+
+Para uma execução mais isolada e padronizada, você pode utilizar o `Dockerfile` fornecido.
+
+#### 1. Clonar o Repositório
+
+```bash
+git clone https://github.com/jleandromorais/Back-S.O.S.git
+cd Back-S.O.S
+```
+
+#### 2. Construir a Imagem Docker
+
+Utilize o `Dockerfile` para construir a imagem da aplicação. O nome da imagem será `back-sos`.
+
+```bash
+docker build -t back-sos .
+```
+
+#### 3. Executar o Contêiner
+
+Execute a imagem construída, mapeando a porta 8080 do contêiner para a porta 8080 da sua máquina.
+
+```bash
+docker run -p 8080:8080 back-sos
+```
+
+A API estará acessível em `http://localhost:8080`.
+
+---
+
+### Teste de Funcionamento
+
+Para verificar se a API está rodando corretamente, você pode tentar acessar um endpoint de teste (se houver) ou a documentação Swagger/OpenAPI (se configurada).
+
+**Exemplo de Acesso (se o Swagger estiver configurado):**
+
+```
+http://localhost:8080/swagger-ui.html
+```
+
+**Nota:** O projeto utiliza persistência em memória (conforme mencionado na **Entrega 02**), o que significa que os dados serão perdidos a cada reinicialização da aplicação. Para persistência de dados, seria necessário configurar um banco de dados externo.
+
+---
 
 ## 📦 Entregas
 
