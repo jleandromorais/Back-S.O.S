@@ -1,5 +1,6 @@
-## Repositório da API do projeto **S.O.S Escola** - uma plataforma de denúncias anônimas para escolas, promovendo um ambiente escolar mais seguro e acolhedor.
+# 🛡️ Back-S.O.S: API de Denúncias Anônimas
 
+Repositório da API do projeto S.O.S Escola - uma plataforma de denúncias anônimas para escolas, promovendo um ambiente escolar mais seguro e acolhedor.
 ---
 
 ## 📋 Índice
