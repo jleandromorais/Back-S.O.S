@@ -207,16 +207,19 @@ http://localhost:8080/swagger-ui.html
 
 #### 🎬 Screencast do Sistema
 - **Vídeo demonstrativo** do sistema funcionando
-- Disponível no YouTube com áudio ou legenda
-- [Link do screencast](https://youtu.be/gHtRXr5x6Rs)
+- Disponível no YouTube com legenda
+- [Link do screencast](https://youtu.be/4mKWjx4NqUQ)
   
 #### 🐛 Issue/Bug Tracker
 - **Issue tracker atualizado**
 - [Ver issues no GitHub](https://github.com/jleandromorais/Back-S.O.S/issues)
+- <img width="1213" height="195" alt="image" src="https://github.com/user-attachments/assets/ac09ce2b-f98d-40cc-8f9c-a82608818bcd" />
+
   
 #### 🧪 Testes Automatizados
 - **Testes implementados**
 - Relatório de Testes (https://github.com/jleandromorais/Back-S.O.S/blob/leandro-branch/%F0%9F%A7%AA%20Relat%C3%B3rio%20de%20Testes%20Automatizados%20-%20S.O.S%20Escola.md)
+---
 
 ## 👥 Equipe
 
