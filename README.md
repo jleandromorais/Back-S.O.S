@@ -6,6 +6,7 @@ Repositório da API do projeto S.O.S Escola - uma plataforma de denúncias anôn
 ## 📋 Índice
 
 - [Sobre o Projeto](#-sobre-o-projeto)
+- [Como Rodar o Projeto](#-como-rodar-o-projeto)
 - [Entregas](#-entregas)
   - [Entrega 01](#-entrega-01-0909)
   - [Entrega 02](#-entrega-02)
