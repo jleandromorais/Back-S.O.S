@@ -19,6 +19,14 @@
 
 ---
 
+## 📺 Demonstração em Vídeo (Screencast)
+
+Assista à execução completa dos testes automatizados e veja a **Pirâmide de Testes** do S.O.S Escola em ação!
+
+[**[LINK PARA O VÍDEO DO SCREEENCAST AQUI](https://youtu.be/J7WYqQVxS9w)**]
+
+---
+
 ## 🎯 Cobertura de Testes
 
 ### 1. Testes de Unidade (9 testes)
