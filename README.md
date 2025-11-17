@@ -208,7 +208,7 @@ http://localhost:8080/swagger-ui.html
 #### 🎬 Screencast do Sistema
 - **Vídeo demonstrativo** do sistema funcionando
 - Disponível no YouTube com áudio ou legenda
-- [Link do screencast](https://youtu.be/xxxxxxxx)
+- [Link do screencast](https://youtu.be/gHtRXr5x6Rs)
   
 #### 🐛 Issue/Bug Tracker
 - **Issue tracker atualizado**
