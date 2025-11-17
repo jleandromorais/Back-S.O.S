@@ -23,7 +23,7 @@
 
 Assista à execução completa dos testes automatizados e veja a **Pirâmide de Testes** do S.O.S Escola em ação!
 
-[**[LINK PARA O VÍDEO DO SCREEENCAST AQUI](https://youtu.be/J7WYqQVxS9w)**]
+[**[Screencast](https://youtu.be/J7WYqQVxS9w)**]
 
 ---
 
