@@ -117,16 +117,6 @@ A API estará acessível em `http://localhost:8080`.
 
 ---
 
-### Teste de Funcionamento
-
-Para verificar se a API está rodando corretamente, você pode tentar acessar um endpoint de teste (se houver) ou a documentação Swagger/OpenAPI (se configurada).
-
-**Exemplo de Acesso (se o Swagger estiver configurado):**
-
-```
-http://localhost:8080/swagger-ui.html
-```
-
 **Nota:** O projeto utiliza persistência em memória (conforme mencionado na **Entrega 02**), o que significa que os dados serão perdidos a cada reinicialização da aplicação. Para persistência de dados, seria necessário configurar um banco de dados externo.
 
 ---
